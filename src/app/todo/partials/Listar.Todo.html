@@ -1,0 +1,17 @@
+<md-list>
+
+    <div class="md-actions" layout layout-align="end center">
+        <md-subheader class="md-no-sticky md-primary">lista</md-subheader>
+        <span flex></span>
+    </div>
+
+    <md-list-item ng-repeat="todo in $ctrl.todos" ui-sref="/editar({ id: todo.id })" class="noright">
+        <p>{{ todo.nome }}</p>
+        <p class="md-caption">{{todo.conteudo}}</p>
+        <md-icon class="md-secondary" ng-style="{color: 'red'}" ng-click="$ctrl.remover(todo)" aria-label="Chat">close</md-icon>
+
+        <md-divider ng-show="!$last"></md-divider>
+
+    </md-list-item>
+
+</md-list>

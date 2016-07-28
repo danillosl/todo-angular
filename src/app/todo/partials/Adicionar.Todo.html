@@ -1,0 +1,24 @@
+<form name="todoForm" autocomplete="off">
+
+    <md-input-container class="md-block">
+        <label>Id</label>
+        <input ng-model="$ctrl.todo.id" disabled>
+    </md-input-container>
+
+    <md-input-container class="md-block">
+        <label>Nome</label>
+        <input ng-model="$ctrl.todo.nome">
+    </md-input-container>
+
+    <md-input-container class="md-block">
+        <label>Conteudo</label>
+        <textarea ng-model="$ctrl.todo.conteudo" md-select-on-focus></textarea>
+    </md-input-container>
+
+
+    <section layout="row" layout-align="center center" layout-wrap>
+        <md-button class="md-raised" ng-click="$ctrl.save()" >Salvar</md-button>
+        <md-button class="md-raised md-warn" ui-sref="/listar">Cancelar</md-button>
+    </section>
+
+</form>

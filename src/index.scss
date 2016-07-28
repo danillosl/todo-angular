@@ -1,0 +1,22 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+          display: none !important;
+    }
+
+$layout-xs: 600px;
+
+body {
+  overflow: hidden;
+  background-color: #EEEEEE;
+}
+
+md-whiteframe {
+  background: #fff;
+}
+
+#content {
+
+  @media (min-width : $layout-xs){
+    padding: 20px;
+  }
+
+}

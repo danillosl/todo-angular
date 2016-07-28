@@ -1,0 +1,101 @@
+<!doctype html>
+<html ng-app="app" ng-controller="containerController as $ctrl">
+
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+  <title>Todo</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+
+  <!-- build:css({.tmp,src}) styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- run `gulp inject` to automatically populate bower styles dependencies -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:css({.tmp,src}) styles/app.css -->
+  <link rel="stylesheet" href="index.css" />
+  <!-- endbuild -->
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+
+<body ng-cloak>
+
+  <div layout="row" layout-fill ng-cloak>
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2" role="sidenav" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+      <md-toolbar class="md-tall md-hue-2" layout-align="end end">
+        <div class="md-toolbar-tools" layout layout-padding>
+          <md-icon>face</md-icon>
+          <div layout="column" layout-padding>
+            <span class="md-body-2">danillo sardinha</span>
+            <span class="md-caption">danillosl@ativa.io</span>
+          </div>
+        </div>
+      </md-toolbar>
+
+      <md-content role="navigation">
+        <md-list>
+          <md-list-item ng-click="$ctrl.section.expand = !$ctrl.section.expand">
+            <p class="md-subheader md-primary">{{$ctrl.section.name}}</p>
+            <span flex></span>
+            <md-icon class="md-primary md-icon-button">{{$ctrl.section.expand ? 'arrow_drop_down' : 'chevron_right'}}</md-icon>
+          </md-list-item>
+          <md-list-item ng-show="$ctrl.section.expand" ng-repeat="action in $ctrl.section.actions" ui-sref="{{action.link}}" ng-click="$ctrl.toggleSidenav('left')">
+            <md-icon>{{action.icon}}</md-icon>
+            <p class="md-body-2">{{action.name}}</p>
+            <span flex></span>
+            <md-icon>chevron_right</md-icon>
+          </md-list-item>
+      </md-content>
+
+    </md-sidenav>
+
+    <section layout="column" role="main" layout-fill>
+
+      <md-toolbar role="toolbar">
+
+        <div class="md-toolbar-tools">
+          <md-button class="md-icon-button" ng-click="$ctrl.toggleSidenav('left')" hide-gt-md aria-label="Menu">
+            <md-icon>menu</md-icon>
+          </md-button>
+          <h4 class="md-title">Dashboard</h4>
+          <span flex></span>
+          <md-button class="md-icon-button" aria-label="Button 1" ui-sref="/adicionar">
+            <md-icon>add</md-icon>
+          </md-button>
+
+        </div>
+
+      </md-toolbar>
+
+      <section id="content" role="content" layout="column" flex>
+
+        <md-content class="md-whiteframe-z2" ng-cloak flex layout-padding ui-view></md-content>
+
+      </section>
+
+    </section>
+  </div>
+
+</body>
+
+<!-- build:js({.tmp,src}) scripts/vendor.js -->
+<!-- bower:js -->
+<!-- run `gulp inject` to automatically populate bower script dependencies -->
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp,src}) scripts/app.js -->
+<!-- inject:js -->
+<!-- js files will be automatically insert here -->
+<!-- endinject -->
+<!-- inject:partials -->
+<!-- angular templates will be automatically converted in js and inserted here -->
+<!-- endinject -->
+<!-- endbuild -->
+
+</html>
