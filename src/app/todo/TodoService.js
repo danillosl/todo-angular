@@ -1,7 +1,7 @@
 angular
     .module('app')
     .service('todoService', function ($resource) {
-      var data = $resource('http://10.1.1.71:8080/api/todos/:id',
+      var data = $resource('http://localhost:8080/api/todos/:id',
         {
           id: '@id'
         },
