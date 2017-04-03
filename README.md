@@ -19,7 +19,7 @@ $ bower install
 $ gulp serve
 ```
 Após executar estes comandos o projeto estara disponivel em [http://localhost:3000]
-https://github.com/danillosl/todo-node-express
+
    [projeto spring boot]: <https://github.com/danillosl/todo-spring-boot>
    [projeto node]: <https://github.com/danillosl/todo-node-express>
    [http://localhost:3000]: <http://localhost:3000>
