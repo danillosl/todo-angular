@@ -5,7 +5,7 @@ Projeto simples usando:
   - angular material
   - ng-resource
 
-Esse projeto espera um backend simples com o crud de todo, o projeto backend que acompanha este projeto é [projeto spring boot] ou [projeto node], o ip do servidor pode ser configurado no arquivo TodoService.js (na proxima verão essa url sera movida para um arquivo de configuração separado).
+Esse projeto espera um backend simples com o crud de todo, o projeto backend que acompanha este projeto é o [projeto spring boot] ou [projeto node], o ip do servidor pode ser configurado no arquivo TodoService.js (na proxima verão essa url sera movida para um arquivo de configuração separado).
 
 ### Instalação
 
